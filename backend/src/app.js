@@ -10,8 +10,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/auth", authRoutes);
-app.use("/api/user", userRoutes);
-app.use("/api/purchase", purchaseRoutes);
+app.use("/auth", authRoutes);
+app.use("/user", userRoutes);
+app.use("/purchase", purchaseRoutes);
 
 module.exports = app;
