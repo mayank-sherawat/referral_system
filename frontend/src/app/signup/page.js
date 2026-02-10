@@ -63,17 +63,37 @@ export default function Signup() {
         <div className="p-10 max-w-md mx-auto">
             <h1 className="text-2xl mb-4">Signup</h1>
 
-            {["name", "email", "password", "Referral Code (optional)"].map((field) => (
-                <input
-                    key={field}
-                    placeholder={field}
-                    type={field === "password" ? "password" : "text"}
-                    className="border p-2 w-full mb-2"
-                    onChange={(e) =>
-                        setForm({ ...form, [field]: e.target.value })
-                    }
-                />
-            ))}
+            <input
+                placeholder="Name"
+                className="border p-2 w-full mb-2"
+                value={form.name}
+                onChange={(e) => setForm({ ...form, name: e.target.value })}
+            />
+
+            <input
+                placeholder="Email"
+                className="border p-2 w-full mb-2"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+            />
+
+            <input
+                type="password"
+                placeholder="Password"
+                className="border p-2 w-full mb-2"
+                value={form.password}
+                onChange={(e) => setForm({ ...form, password: e.target.value })}
+            />
+
+            <input
+                placeholder="Referral Code (optional)"
+                className="border p-2 w-full mb-2"
+                value={form.referralCode}
+                onChange={(e) =>
+                    setForm({ ...form, referralCode: e.target.value })
+                }
+            />
+
 
             <button
                 onClick={handleSignup}

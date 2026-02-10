@@ -6,6 +6,7 @@ const { isValidEmail, isValidPassword } = require("../utils/validators");
 
 
 exports.signup = async (req, res) => {
+
     const { name, email, password, referralCode } = req.body;
 
     if (!name || !email || !password) {
