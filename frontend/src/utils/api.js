@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://referral-system-backend-gilt.vercel.app/";
 
 export const apiRequest = async (endpoint, method = "GET", body, token) => {
   const res = await fetch(`${API_URL}${endpoint}`, {
